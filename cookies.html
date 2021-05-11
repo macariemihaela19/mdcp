@@ -1,18 +1,11 @@
 <script> 
-  document.cookie = "name=oeschger";
-  document.cookie = "favorite_food=tripe";
-  document.cookie = "test1=Hello";
-  document.cookie = "test2=World";
-
-const cookieValue = document.cookie
-  .split('; ')
-  .find(row => row.startsWith('test2='))
-  .split('=')[1];
-
-function alertCookieValue() {
-  alert(cookieValue);
+function doOnce() {
+  if (!document.cookie.split('; ').find(row => row.startsWith('doSomethingOnlyOnce'))) {
+    alert("Do something here!");
+    document.cookie = "blablabla=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+  }
 }
 </script>
 <body> 
-  Testare ex 2<button onclick="alertCookieValue()">Show cookie value</button>
+  Testare ex 3 <button onclick="doOnce()">Only do something once</button>
 </body>
