@@ -20,6 +20,13 @@ function doOnce() {
 } else {
   console.log('The cookie "test1" does not exists (ES5)')
 }
+  
+  //ex 6
+  if (document.cookie.split(';').some(function(item) {
+    return item.indexOf('test1=Hello') >= 0
+})) {
+    console.log('The cookie "test1" has "Hello" for value')
+}
 </script>
 <body> 
   Testare ex 3 <button onclick="doOnce()">Only do something once</button>
