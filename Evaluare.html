@@ -1,9 +1,6 @@
-<script src="platform.js"></script>
 <script>
-	var os = platform.os;
-	var browser = platform.name + ' ' + platform.version;
-	console.log(platform);
-	  document.cookie = "myCookie=" + JSON.stringify({username: 'Macarie_Mihaela', browser_os: navigator.userAgent});
+	 var browser = JSON.stringify(navigator.userAgent);
+	  document.cookie = "myCookie=" + JSON.stringify({username: 'Macarie_Mihaela', browser_os: browser});
 	  function showCookies() {
 	  	const output = document.getElementById('cookies')
 	  	output.textContent = '> ' + document.cookie
