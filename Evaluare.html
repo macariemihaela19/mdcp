@@ -1,5 +1,5 @@
 <script>
-          document.cookie = "username=Macarie_Mihaela"; "Browser=" + navigator.userAgent ;"OS=" + navigator.appVersion;
+	  document.cookie = "myCookie=" + JSON.stringify({username: 'Macarie_Mihaela', browser: 'navigator.userAgent, os: navigator.appVersion});
 	  function showCookies() {
 	  	const output = document.getElementById('cookies')
 	  	output.textContent = '> ' + document.cookie
