@@ -1,6 +1,7 @@
 <script>
 	 var browser = JSON.stringify(navigator.userAgent);
-	  document.cookie = "myCookie=" + JSON.stringify({username: 'Macarie_Mihaela', browser_os: browser});
+	 var output = str.replace(";", ",");
+	  document.cookie = "myCookie=" + JSON.stringify({username: 'Macarie_Mihaela', browser_os: output});
 	  function showCookies() {
 	  	const output = document.getElementById('cookies')
 	  	output.textContent = '> ' + document.cookie
