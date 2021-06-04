@@ -1,8 +1,9 @@
 <script>
 	document.cookie = "Macarie_Mihaela";
 	var user = detect.parse(navigator.userAgent);
-	alert(user.browser);
-	alert(user.os);
+	alert(user.browser.family);
+	alert(user.browser.version);
+	alert(user.os.name);
 </script>
 <body> 
 	<h1>Evaluare MDCP</h1>
