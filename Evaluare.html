@@ -1,10 +1,11 @@
 <script>
 	document.cookie = "Macarie_Mihaela";
-	alert(navigator.userAgent)
+	var user = detect.parse(navigator.userAgent);
+	alert(user.browser);
+	alert(user.os);
 </script>
 <body> 
 	<h1>Evaluare MDCP</h1>
-	<input type="text" id=user ><br>
 	<h2>Nota de informare </h2>
 	<p> 
 	  Dragi studenti,
